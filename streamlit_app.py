@@ -52,15 +52,13 @@ def clear_database():
 
 # query db
 PROMPT_TEMPLATE = """
-Answer the question based on the above context
-format the recipe in recipe name, ingredients, total time to prepare,cusine, course and diet based only on the following context:
+    Answer the question as detailed as possible from the provided context, make sure to provide all the details. format the recipe in recipe name, ingredients, total time to prepare,cusine, course and diet. if the answer is not in
+    provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
+    Context:\n {context}?\n
+    Question: \n{question}\n
 
-{context}
-
----
-
-Answer the question based on the above context: {question}
-"""
+    Answer:
+    """
 def query_rag(query_text: str):
     # Prepare the DB.
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001" , google_api_key=GOOGLE_API_KEY)
