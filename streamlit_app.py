@@ -52,7 +52,8 @@ def clear_database():
 
 # query db
 PROMPT_TEMPLATE = """
-provide recipe names, ingredients, total time to prepare, cuisine, course and diet based only on the following context:
+Answer the question based on the above context
+format the recipe in recipe name, ingredients, total time to prepare,cusine, course and diet based only on the following context:
 
 {context}
 
@@ -60,7 +61,6 @@ provide recipe names, ingredients, total time to prepare, cuisine, course and di
 
 Answer the question based on the above context: {question}
 """
-
 def query_rag(query_text: str):
     # Prepare the DB.
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001" , google_api_key=GOOGLE_API_KEY)
