@@ -6,5 +6,5 @@ langchain_text_splitters
 google-generativeai
 unstructured
 openpyxl
-chromadb
+faiss-cpu
 python-dotenv
