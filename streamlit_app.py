@@ -88,7 +88,7 @@ def main():
 
     st.header("Recipe chatbot👩🏻‍🍳")
 
-    user_question = st.text_input("Ask for delicious recipes e.g: <i>egg recipe for breakfast, healthy food for gym geek</i>'", unsafe_allow_html=True, key="user_question")
+    user_question = st.text_input("Ask for delicious recipes e.g: <i>egg recipe for breakfast, healthy food for gym geek</i>", unsafe_allow_html=True, key="user_question")
     if len(user_question) > 0:
       response = query_rag(user_question)
       st.write(response)
