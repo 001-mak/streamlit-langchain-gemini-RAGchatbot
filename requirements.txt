@@ -1,2 +1,10 @@
 streamlit
-openai
+langchain
+langchain-community
+langchain-google-genai
+langchain_text_splitters
+google-generativeai
+unstructured
+openpyxl
+chromadb
+python-dotenv
