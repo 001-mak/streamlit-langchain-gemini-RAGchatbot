@@ -88,11 +88,11 @@ def main():
     chunks = split_documents(data)
     add_to_chroma(data)
 
-    st.header("AI clone chatbot💁")
+    st.header("Recipe chatbot💁")
 
-    user_question = st.text_input("Ask a Question from the PDF Files", key="user_question")
+    user_question = st.text_input("Ask for delicious recipes", key="user_question")
     response = query_rag(user_question)
-    st.write("Reply: ", response)
+    st.write(response)
 
    
 if __name__ == "__main__":
