@@ -88,7 +88,7 @@ def main():
     chunks = split_documents(data)
     add_to_chroma(data)
 
-    st.header("Recipe chatbot💁")
+    st.header("Recipe chatbot👩🏻‍🍳")
 
     user_question = st.text_input("Ask for delicious recipes", key="user_question")
     response = query_rag(user_question)
