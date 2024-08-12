@@ -52,7 +52,7 @@ def clear_database():
 
 # query db
 PROMPT_TEMPLATE = """
-    Answer the question as detailed as possible from the provided context, make sure to provide all the details. format the recipe in recipe name, ingredients, total time to prepare,cusine, course and diet. if the answer is not in
+    Answer the question as detailed as possible from the provided context, make sure to provide all the details. format the recipe with title Recipe Name:, Ingredients:, Total time to prepare:,Cuisine:, Course: and Diet:. if the answer is not in
     provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
     Context:\n {context}?\n
     Question: \n{question}\n
