@@ -88,12 +88,12 @@ def main():
 
     st.header("Recipe chatbot👩🏻‍🍳")
 
-    user_question = st.text_input("Ask for delicious recipes e.g: egg recipe for breakfast, healthy food for gym geek", key="user_question")
+    user_question = st.text_input("Ask for delicious recipes.", key="user_question")
     if len(user_question) > 0:
       response = query_rag(user_question)
       st.write(response)
     else:
-      st.write('Please, enter your query.')
+      st.write('Please, enter your query. e.g: egg recipe for breakfast, healthy food for gym geek')
    
 if __name__ == "__main__":
     main()
